@@ -22,6 +22,11 @@ class OtherContentsViewController: UIViewController {
 // MARK: RecognizedTextDataSource
 extension OtherContentsViewController: RecognizedTextDataSource {
     func addRecognizedText(recognizedText: NumberElement?) {
-    
+        guard let candidate = recognizedText else {
+            textView?.text = "Could not Scan data from image"
+            return
+        }
+        let text = "Value: \(String(describing: candidate.numberValue))/n Date: \(String(describing: candidate.dateString))"
+        textView?.text = text
     }
 }

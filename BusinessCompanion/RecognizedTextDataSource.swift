@@ -10,5 +10,5 @@ import Vision
 import ReceiptScanner
 
 protocol RecognizedTextDataSource: AnyObject {
-    func addRecognizedText(recognizedText: NumberElement?)
+    func showCandidate(candidate: NumberElement?)
 }

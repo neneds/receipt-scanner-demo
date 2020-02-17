@@ -61,8 +61,8 @@ extension DocumentScanningViewController: VNDocumentCameraViewControllerDelegate
                         }
                         DispatchQueue.main.async {
                             if let resultsVC = self.resultsViewController {
-                                self.resultsViewController?.addRecognizedText(recognizedText: candidate)
                                 self.navigationController?.pushViewController(resultsVC, animated: true)
+                                self.resultsViewController?.showCandidate(candidate: candidate)
                             }
                             self.activityIndicator.stopAnimating()
                         }
@@ -94,8 +94,8 @@ extension DocumentScanningViewController: UIImagePickerControllerDelegate {
                 DispatchQueue.main.async {
                     if let resultsVC = self.resultsViewController {
                         picker.dismiss(animated: true, completion: nil)
-                        self.resultsViewController?.addRecognizedText(recognizedText: candidate)
                         self.navigationController?.pushViewController(resultsVC, animated: true)
+                        self.resultsViewController?.showCandidate(candidate: candidate)
                     }
                     self.activityIndicator.stopAnimating()
                 }

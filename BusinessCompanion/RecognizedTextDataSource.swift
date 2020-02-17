@@ -7,7 +7,8 @@ The protocol that a class must conform to in order to receive recognized text in
 
 import UIKit
 import Vision
+import ReceiptScanner
 
 protocol RecognizedTextDataSource: AnyObject {
-    func addRecognizedText(recognizedText: [VNRecognizedTextObservation])
+    func addRecognizedText(recognizedText: NumberElement?)
 }

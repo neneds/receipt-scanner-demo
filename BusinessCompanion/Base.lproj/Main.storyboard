@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14784.3" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="4sh-BJ-qwS">
-    <device id="retina6_1" orientation="portrait"/>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="4sh-BJ-qwS">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14740.3"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -15,25 +15,18 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zjc-wi-7eJ">
-                                <rect key="frame" x="158" y="395" width="98" height="30"/>
-                                <state key="normal" title="Scan Receipts"/>
-                                <connections>
-                                    <action selector="scan:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1b9-QZ-En7"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yqc-mn-96g">
-                                <rect key="frame" x="167.5" y="433" width="79" height="30"/>
-                                <state key="normal" title="Scan Cards"/>
+                                <rect key="frame" x="165" y="433" width="84" height="30"/>
+                                <state key="normal" title="Use Camera"/>
                                 <connections>
-                                    <action selector="scan:" destination="BYZ-38-t0r" eventType="touchUpInside" id="LOe-Oo-LSB"/>
+                                    <action selector="scan:" destination="BYZ-38-t0r" eventType="touchUpInside" id="a8q-KX-1r4"/>
                                 </connections>
                             </button>
                             <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nsl-Kw-0UA">
-                                <rect key="frame" x="168" y="471" width="78" height="30"/>
-                                <state key="normal" title="Scan Other"/>
+                                <rect key="frame" x="165" y="471" width="84" height="30"/>
+                                <state key="normal" title="Load Image "/>
                                 <connections>
-                                    <action selector="scan:" destination="BYZ-38-t0r" eventType="touchUpInside" id="yHV-to-x1o"/>
+                                    <action selector="imagePickerAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="f23-Xh-YRh"/>
                                 </connections>
                             </button>
                             <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="QmB-kZ-89C">
@@ -44,11 +37,9 @@
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="Yqc-mn-96g" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="2zk-Cu-I3o"/>
-                            <constraint firstItem="zjc-wi-7eJ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="3Zu-z1-fmD"/>
                             <constraint firstItem="QmB-kZ-89C" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="4dg-5g-3uC"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="QmB-kZ-89C" secondAttribute="bottom" id="8P4-ql-8qY"/>
                             <constraint firstItem="Nsl-Kw-0UA" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="D3I-Fa-jw4"/>
-                            <constraint firstItem="Yqc-mn-96g" firstAttribute="top" secondItem="zjc-wi-7eJ" secondAttribute="bottom" constant="8" id="G2y-vQ-aeW"/>
                             <constraint firstItem="Nsl-Kw-0UA" firstAttribute="top" secondItem="Yqc-mn-96g" secondAttribute="bottom" constant="8" id="Rq2-cI-97x"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="QmB-kZ-89C" secondAttribute="trailing" id="al5-ne-TfX"/>
                             <constraint firstItem="QmB-kZ-89C" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="cDx-iL-hNh"/>
@@ -187,6 +178,7 @@
                 <navigationController title="Business Companion" automaticallyAdjustsScrollViewInsets="NO" modalPresentationStyle="fullScreen" id="4sh-BJ-qwS" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="15g-Ba-kgo">
+                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>

@@ -7,6 +7,7 @@ View controller for unstructured text.
 
 import UIKit
 import Vision
+import ReceiptScanner
 
 class OtherContentsViewController: UIViewController {
     
@@ -20,14 +21,7 @@ class OtherContentsViewController: UIViewController {
 }
 // MARK: RecognizedTextDataSource
 extension OtherContentsViewController: RecognizedTextDataSource {
-    func addRecognizedText(recognizedText: [VNRecognizedTextObservation]) {
-        // Create a full transcript to run analysis on.
-        let maximumCandidates = 1
-        for observation in recognizedText {
-            guard let candidate = observation.topCandidates(maximumCandidates).first else { continue }
-            transcript += candidate.string
-            transcript += "\n"
-        }
-        textView?.text = transcript
+    func addRecognizedText(recognizedText: NumberElement?) {
+    
     }
 }

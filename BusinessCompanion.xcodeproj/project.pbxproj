@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		0664F8782282305400AF5A27 /* OtherContentsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0664F8772282305400AF5A27 /* OtherContentsViewController.swift */; };
 		06DBA5322280B4EB00A015FC /* RecognizedTextDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 06DBA5312280B4EB00A015FC /* RecognizedTextDataSource.swift */; };
-		E666440023FB1E60008CB14A /* ReceiptScanner in Frameworks */ = {isa = PBXBuildFile; productRef = E66643FF23FB1E60008CB14A /* ReceiptScanner */; };
+		E68963C9240D738800CDBF3B /* ReceiptScanner in Frameworks */ = {isa = PBXBuildFile; productRef = E68963C8240D738800CDBF3B /* ReceiptScanner */; };
 		FAB06E002272614F00B3D181 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB06DFF2272614F00B3D181 /* AppDelegate.swift */; };
 		FAB06E022272614F00B3D181 /* DocumentScanningViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB06E012272614F00B3D181 /* DocumentScanningViewController.swift */; };
 		FAB06E052272614F00B3D181 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAB06E032272614F00B3D181 /* Main.storyboard */; };
@@ -37,7 +37,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E666440023FB1E60008CB14A /* ReceiptScanner in Frameworks */,
+				E68963C9240D738800CDBF3B /* ReceiptScanner in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -119,7 +119,7 @@
 			);
 			name = BusinessCompanion;
 			packageProductDependencies = (
-				E66643FF23FB1E60008CB14A /* ReceiptScanner */,
+				E68963C8240D738800CDBF3B /* ReceiptScanner */,
 			);
 			productName = BusinessCompanion;
 			productReference = FAB06DFC2272614F00B3D181 /* BusinessCompanion.app */;
@@ -150,7 +150,7 @@
 			);
 			mainGroup = FAB06DF32272614F00B3D181;
 			packageReferences = (
-				E66643FE23FB1E60008CB14A /* XCRemoteSwiftPackageReference "receipt-scanner" */,
+				E68963C7240D738800CDBF3B /* XCRemoteSwiftPackageReference "san-fincash-receipt-scanner-ios" */,
 			);
 			productRefGroup = FAB06DFD2272614F00B3D181 /* Products */;
 			projectDirPath = "";
@@ -386,20 +386,20 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		E66643FE23FB1E60008CB14A /* XCRemoteSwiftPackageReference "receipt-scanner" */ = {
+		E68963C7240D738800CDBF3B /* XCRemoteSwiftPackageReference "san-fincash-receipt-scanner-ios" */ = {
 			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/neneds/receipt-scanner.git";
+			repositoryURL = "https://bitbucket.org/altran-ais/san-fincash-receipt-scanner-ios.git";
 			requirement = {
-				branch = "feature/spm-support";
+				branch = master;
 				kind = branch;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		E66643FF23FB1E60008CB14A /* ReceiptScanner */ = {
+		E68963C8240D738800CDBF3B /* ReceiptScanner */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = E66643FE23FB1E60008CB14A /* XCRemoteSwiftPackageReference "receipt-scanner" */;
+			package = E68963C7240D738800CDBF3B /* XCRemoteSwiftPackageReference "san-fincash-receipt-scanner-ios" */;
 			productName = ReceiptScanner;
 		};
 /* End XCSwiftPackageProductDependency section */
